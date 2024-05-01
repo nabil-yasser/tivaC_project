@@ -1,0 +1,15 @@
+# Partly inspired by QT coding style
+BasedOnStyle: WebKit
+Language: Cpp
+ColumnLimit: 80
+PointerBindsToType: false
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeBraces: Allman
+IndentCaseLabels: true
+AlignAfterOpenBracket: true
+AlwaysBreakTemplateDeclarations: true
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+SortIncludes: false
+AlignConsecutiveMacros: AcrossEmptyLines
+AlignTrailingComments: Always

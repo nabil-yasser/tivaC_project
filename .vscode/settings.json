@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "lcd.h": "c",
+        "io.h": "c",
+        "mcu_registers.h": "c",
+        "twi_cfg.h": "c"
+    }
+}

@@ -1,15 +1,20 @@
-# Partly inspired by QT coding style
-BasedOnStyle: WebKit
-Language: Cpp
-ColumnLimit: 80
-PointerBindsToType: false
-BreakBeforeBinaryOperators: NonAssignment
-BreakBeforeBraces: Allman
-IndentCaseLabels: true
-AlignAfterOpenBracket: true
-AlwaysBreakTemplateDeclarations: true
+# Format Style Options - Created with Clang Power Tools
+---
+AlignAfterOpenBracket: Align 
+AlignConsecutiveAssignments: AcrossComments 
+AlignConsecutiveDeclarations: AcrossComments 
+AlignConsecutiveMacros: Consecutive
+AlignTrailingComments: Always
+AlignArrayOfStructures: Left
 AllowShortEnumsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: None
+BasedOnStyle: WebKit
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeBraces: Allman
+ColumnLimit: 80
+IndentCaseLabels: true
+IndentPPDirectives: BeforeHash
+Language: Cpp
+ReflowComments: true
 SortIncludes: false
-AlignConsecutiveMacros: AcrossEmptyLines
-AlignTrailingComments: Always
+...

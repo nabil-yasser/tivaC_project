@@ -1,10 +1,10 @@
 /******************************************************************************
- * @file    main.c
+ * @file    mcu.h
  * 
- * @brief   This file contains the main function body
+ * @brief 
  * 
  * @version V1.0
- * @date    01 May 2024
+ * @date    25 May 2024
  * 
  * @author  Nabil Yasser - Embedded Software Engineer
  * 
@@ -12,31 +12,31 @@
  * 
  *****************************************************************************/
 
+#ifndef MCU_H
+#define MCU_H
+
 /* ========================================================================= */
 /* ================                 INCLUDES                ================ */
 /* ========================================================================= */
 
-#include "mcal/mcu/mcu.h"
-#include "mcal/intCtrl/intCtrl.h"
-#include "utils/macros.h"
-#include "utils/mcu_registers.h"
-
 /* ========================================================================= */
-/* ================              MAIN FUNCTION              ================ */
+/* ================        GLOBAL FUNCTION PROTOTYPES       ================ */
 /* ========================================================================= */
 
-int main(void)
-{
-    // Initialization section
-    mcu_init();
-    intCtrl_init();
-    
-    // Super loop section
-    for (;;)
-    {
-        // Program code section
-    }
-}
+/******************************************************************************
+ * @brief Initalizes the mcu based on user's configurations
+ * 
+ * Sync/Async: Synchronous
+ * 
+ * Reentrancy: Non Reentrant
+ * 
+ * @param void
+ * 
+ * @return void
+ *****************************************************************************/
+void mcu_init(void);
+
+#endif /* MCU_H */
 
 /* ========================================================================= */
 /* ================               END OF FILE               ================ */

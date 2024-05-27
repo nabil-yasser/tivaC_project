@@ -1,4 +1,4 @@
-/******************************************************************************
+/*************************************************************************/ /**
  * @file    intCtrl.c
  *
  * @brief   Implementation of interrupts control driver that controls every
@@ -45,7 +45,7 @@
 /* ================        LOCAL FUNCTION PROTOTYPES        ================ */
 /* ========================================================================= */
 
-/******************************************************************************
+/*************************************************************************/ /**
  * @brief Parses the interrupt id to get mapping information from it, this
  *        function depends on masking interrupt id as following:
  *        bit (0-4) represents the bit required for making operations on this
@@ -65,7 +65,7 @@
 void static intGetMappingInfo(IRQn_Type etInterruptId, uint8_t* ui8IntRegId,
                               uint8_t* ui8IntBitId);
 
-/******************************************************************************
+/*************************************************************************/ /**
  * @brief Initializes all interrupts with initial configurations made by the
  *        user in @c intCtrl_lcfg.c file.
  *

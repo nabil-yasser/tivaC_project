@@ -1,4 +1,4 @@
-/******************************************************************************
+/*************************************************************************/ /**
  * @file    intCtrl.h
  *
  * @brief   This file contains interrupts interfacing for tm4c123gh6pm MCU
@@ -27,51 +27,47 @@
 
 typedef enum intCtrl_priorityLevel_et
 {
-    // When user configure priority grouping to xxx (8 Groups & 1 Subgroups)
-    XXX_GROUP0_SUB0 = 0,
-    XXX_GROUP1_SUB0 = 1,
-    XXX_GROUP2_SUB0 = 2,
-    XXX_GROUP3_SUB0 = 3,
-    XXX_GROUP4_SUB0 = 4,
-    XXX_GROUP5_SUB0 = 5,
-    XXX_GROUP6_SUB0 = 6,
-    XXX_GROUP7_SUB0 = 7,
+    XXX_GROUP0_SUB0 = 0, ///< Priority 0 & Subpriority 0
+    XXX_GROUP1_SUB0 = 1, ///< Priority 1 & Subpriority 0
+    XXX_GROUP2_SUB0 = 2, ///< Priority 2 & Subpriority 0
+    XXX_GROUP3_SUB0 = 3, ///< Priority 3 & Subpriority 0
+    XXX_GROUP4_SUB0 = 4, ///< Priority 4 & Subpriority 0
+    XXX_GROUP5_SUB0 = 5, ///< Priority 5 & Subpriority 0
+    XXX_GROUP6_SUB0 = 6, ///< Priority 6 & Subpriority 0
+    XXX_GROUP7_SUB0 = 7, ///< Priority 7 & Subpriority 0
 
-    // When user configure priority grouping to xx.y (4 Groups & 2 Subgroups)
-    XXY_GROUP0_SUB0 = 0,
-    XXY_GROUP0_SUB1 = 1,
-    XXY_GROUP1_SUB0 = 2,
-    XXY_GROUP1_SUB1 = 3,
-    XXY_GROUP2_SUB0 = 4,
-    XXY_GROUP2_SUB1 = 5,
-    XXY_GROUP3_SUB0 = 6,
-    XXY_GROUP3_SUB1 = 7,
+    XXY_GROUP0_SUB0 = 0, ///< Priority 0 & Subpriority 0
+    XXY_GROUP0_SUB1 = 1, ///< Priority 0 & Subpriority 1
+    XXY_GROUP1_SUB0 = 2, ///< Priority 1 & Subpriority 0
+    XXY_GROUP1_SUB1 = 3, ///< Priority 1 & Subpriority 1
+    XXY_GROUP2_SUB0 = 4, ///< Priority 2 & Subpriority 0
+    XXY_GROUP2_SUB1 = 5, ///< Priority 2 & Subpriority 1
+    XXY_GROUP3_SUB0 = 6, ///< Priority 3 & Subpriority 0
+    XXY_GROUP3_SUB1 = 7, ///< Priority 3 & Subpriority 1
 
-    // When user configure priority grouping to x.yy (2 Groups & 4 Subgroups)
-    XYY_GROUP0_SUB0 = 0,
-    XYY_GROUP0_SUB1 = 1,
-    XYY_GROUP0_SUB2 = 2,
-    XYY_GROUP0_SUB3 = 3,
-    XYY_GROUP1_SUB0 = 4,
-    XYY_GROUP1_SUB1 = 5,
-    XYY_GROUP1_SUB2 = 6,
-    XYY_GROUP1_SUB3 = 7,
+    XYY_GROUP0_SUB0 = 0, ///< Priority 0 & Subpriority 0
+    XYY_GROUP0_SUB1 = 1, ///< Priority 0 & Subpriority 1
+    XYY_GROUP0_SUB2 = 2, ///< Priority 0 & Subpriority 2
+    XYY_GROUP0_SUB3 = 3, ///< Priority 0 & Subpriority 3
+    XYY_GROUP1_SUB0 = 4, ///< Priority 1 & Subpriority 0
+    XYY_GROUP1_SUB1 = 5, ///< Priority 1 & Subpriority 1
+    XYY_GROUP1_SUB2 = 6, ///< Priority 1 & Subpriority 2
+    XYY_GROUP1_SUB3 = 7, ///< Priority 1 & Subpriority 3
 
-    // When user configure priority grouping to yyy (1 Groups & 8 Subgroups)
-    YYY_GROUP0_SUB0 = 0,
-    YYY_GROUP0_SUB1 = 1,
-    YYY_GROUP0_SUB2 = 2,
-    YYY_GROUP0_SUB3 = 3,
-    YYY_GROUP0_SUB4 = 4,
-    YYY_GROUP0_SUB5 = 5,
-    YYY_GROUP0_SUB6 = 6,
-    YYY_GROUP0_SUB7 = 7,
+    YYY_GROUP0_SUB0 = 0, ///< Priority 0 & Subpriority 0
+    YYY_GROUP0_SUB1 = 1, ///< Priority 0 & Subpriority 1
+    YYY_GROUP0_SUB2 = 2, ///< Priority 0 & Subpriority 2
+    YYY_GROUP0_SUB3 = 3, ///< Priority 0 & Subpriority 3
+    YYY_GROUP0_SUB4 = 4, ///< Priority 0 & Subpriority 4
+    YYY_GROUP0_SUB5 = 5, ///< Priority 0 & Subpriority 5
+    YYY_GROUP0_SUB6 = 6, ///< Priority 0 & Subpriority 6
+    YYY_GROUP0_SUB7 = 7, ///< Priority 0 & Subpriority 7
 } intCtrl_priorityLevel_et;
 
 typedef enum intCtrl_state_et
 {
-    INTCTRL_DISABLE,
-    INTCTRL_ENABLE
+    INTCTRL_DISABLE, ///< Diable interrupt
+    INTCTRL_ENABLE   ///< Enable interrupt
 } intCtrl_state_et;
 
 typedef struct intCtrl_config_st
@@ -85,7 +81,7 @@ typedef struct intCtrl_config_st
 /* ================        GLOBAL FUNCTION PROTOTYPES       ================ */
 /* ========================================================================= */
 
-/******************************************************************************
+/*************************************************************************/ /**
  * @brief Initializes all system interrupts configurations based on user's
           chosen configurations in @c intCtrl_cfg.h file.
  *

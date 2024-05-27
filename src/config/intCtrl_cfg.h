@@ -1,4 +1,4 @@
-/******************************************************************************
+/*************************************************************************/ /**
  * @file    intCtrl_cfg.h
  *
  * @brief   This file contains user's configurations for interrupts
@@ -25,7 +25,7 @@ extern intCtrl_config_st g_intConfigurations[];
 /* =========================================================================
  */
 
-/******************************************************************************
+/*************************************************************************/ /**
  * @brief Enable/Disable global exceptions except non-maskable interrupts.
  *
  * Possible values:
@@ -37,7 +37,7 @@ extern intCtrl_config_st g_intConfigurations[];
  *****************************************************************************/
 #    define INTCTRL_FAULTMASK 1
 
-/******************************************************************************
+/*************************************************************************/ /**
  * @brief Enable/Disable priority programmable interrupts.
  *
  * Possible values:
@@ -48,7 +48,7 @@ extern intCtrl_config_st g_intConfigurations[];
  *****************************************************************************/
 #    define INTCTRL_PRIMASK 1
 
-/******************************************************************************
+/*************************************************************************/ /**
  * @brief Changes the offset of vector table
  *
  * Possible values:
@@ -61,7 +61,7 @@ extern intCtrl_config_st g_intConfigurations[];
  *****************************************************************************/
 #    define INTCTRL_VTABLE_OFFSET 0x00000000
 
-/******************************************************************************
+/*************************************************************************/ /**
  * @brief Configures the priority grouping for the exception model
  *
  * Possible values:

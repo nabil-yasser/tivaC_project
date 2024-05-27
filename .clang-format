@@ -15,6 +15,6 @@ ColumnLimit: 80
 IndentCaseLabels: true
 IndentPPDirectives: AfterHash
 Language: Cpp
-ReflowComments: true
+ReflowComments: false
 SortIncludes: false
 ...

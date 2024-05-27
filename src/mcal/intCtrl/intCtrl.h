@@ -1,25 +1,25 @@
 /******************************************************************************
  * @file    intCtrl.h
- * 
+ *
  * @brief   This file contains interrupts interfacing for tm4c123gh6pm MCU
- * 
+ *
  * @version V1.0
  * @date    20 May 2024
- * 
+ *
  * @author  Nabil Yasser - Embedded Software Engineer
- * 
+ *
  * @author  GitHub: https://github.com/nabil-yasser
- * 
+ *
  *****************************************************************************/
 
 #ifndef INTCTRL_H
-#define INTCTRL_H
+#    define INTCTRL_H
 
 /* ========================================================================= */
 /* ================                 INCLUDES                ================ */
 /* ========================================================================= */
 
-#include "../../utils/mcu_registers.h"
+#    include "../../utils/mcu_registers.h"
 
 /* ========================================================================= */
 /* ================     GLOBAL DATA TYPES AND STRUCTURES    ================ */
@@ -71,13 +71,13 @@ typedef enum intCtrl_priorityLevel_et
 typedef enum intCtrl_state_et
 {
     INTCTRL_DISABLE,
-    INTCTRL_ENABLE    
+    INTCTRL_ENABLE
 } intCtrl_state_et;
 
 typedef struct intCtrl_config_st
 {
-    IRQn_Type etInterruptId;
-    intCtrl_state_et etInterruptState;
+    IRQn_Type                etInterruptId;
+    intCtrl_state_et         etInterruptState;
     intCtrl_priorityLevel_et etPriorityLevel;
 } intCtrl_config_st;
 
@@ -88,15 +88,15 @@ typedef struct intCtrl_config_st
 /******************************************************************************
  * @brief Initializes all system interrupts configurations based on user's
           chosen configurations in @c intCtrl_cfg.h file.
- * 
+ *
  * Sync/Async: Synchronous
- * 
+ *
  * Reentrancy: Non Reentrant
  *
  * @param void This function doesn't take any parameters
  *
  * @return void
- * 
+ *
  *****************************************************************************/
 void intCtrl_init(void);
 

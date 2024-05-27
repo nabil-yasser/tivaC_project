@@ -13,7 +13,7 @@ BreakBeforeBinaryOperators: NonAssignment
 BreakBeforeBraces: Allman
 ColumnLimit: 80
 IndentCaseLabels: true
-IndentPPDirectives: BeforeHash
+IndentPPDirectives: AfterHash
 Language: Cpp
 ReflowComments: true
 SortIncludes: false

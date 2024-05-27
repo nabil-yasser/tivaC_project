@@ -48,14 +48,14 @@ void mcu_init(void)
 #elif (isConfigEnabled(MCU_PLL_STATE))
     // Nothing to do
 #else
-    #error "Invalid configuration value, only [0, 1] allowed."
+#    error "Invalid configuration value, only [0, 1] allowed."
 #endif
 
 // Select crystal value and oscillator source and clear the PWRDN bit in RCC
 #if (MCU_OSCSRC >= 0 && MCU_OSCSRC <= 3)
     SYSCTL->RCC |= (MCU_OSCSRC << OSCSRC_BITS_OFFSET);
 #else
-    #error "Invalid configuration value, only [0 ~ 3] allowed."
+#    error "Invalid configuration value, only [0 ~ 3] allowed."
 #endif
 
 #if (MCU_CRYSTAL_VALUE >= 0 && MCU_CRYSTAL_VALUE <= 20)
@@ -67,22 +67,22 @@ void mcu_init(void)
 #elif (isConfigEnabled(MCU_PLL_STATE))
     CLEAR_BIT(SYSCTL->RCC, PWRDN_BIT_OFFSET);
 #else
-    #error "Invalid configuration value, only [0, 1] allowed."
+#    error "Invalid configuration value, only [0, 1] allowed."
 #endif
 
 // Select the desired system divider SYSDIV in RCC and set the USESYS bit
 #if (isConfigEnabled(MCU_USESYSDIV) || isConfigEnabled(MCU_PLL_STATE))
-    #if (MCU_SYSDIV_VALUE >= 0 && MCU_SYSDIV_VALUE <= 15)
+#    if (MCU_SYSDIV_VALUE >= 0 && MCU_SYSDIV_VALUE <= 15)
     SYSCTL->RCC |= (MCU_SYSDIV_VALUE << SYSDIV_BITS_OFFSET);
-    #else
-        #error "Invalid configuration value, only [0 ~ 15] allowed."
-    #endif
+#    else
+#        error "Invalid configuration value, only [0 ~ 15] allowed."
+#    endif
 
-    #if (isConfigDisabled(MCU_USESYSDIV))
-        // Nothing to do
-    #elif (isConfigEnabled(MCU_USESYSDIV))
+#    if (isConfigDisabled(MCU_USESYSDIV))
+    // Nothing to do
+#    elif (isConfigEnabled(MCU_USESYSDIV))
     SET_BIT(SYSCTL->RCC, USESYSDIV_BIT_OFFSET);
-    #endif
+#    endif
 #endif
 
 // Wait for the PLL to lock by polling the PLLLRIS bit in RIS register

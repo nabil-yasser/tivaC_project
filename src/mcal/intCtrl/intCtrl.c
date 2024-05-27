@@ -68,16 +68,16 @@ void static intGetMappingInfo(IRQn_Type etInterruptId, uint8_t* ui8IntRegId,
 /******************************************************************************
  * @brief Initializes all interrupts with initial configurations made by the
  *        user in @c intCtrl_lcfg.c file.
- * 
+ *
  * Sync/Async: Synchronous
- * 
+ *
  * Reentrancy: Non Reentrant
- * 
+ *
  * @param[in] cfgArray Pointer to array of structs that carries the
  *                     configurations for each interrupt.
- * 
+ *
  * @return void
- * 
+ *
  *****************************************************************************/
 void static intConfigure(intCtrl_config_st const* cfgArray);
 
@@ -88,7 +88,7 @@ void static intConfigure(intCtrl_config_st const* cfgArray);
 void static intGetMappingInfo(IRQn_Type etInterruptId, uint8_t* ui8IntRegId,
                               uint8_t* ui8IntBitId)
 {
-    *ui8IntRegId  = ((etInterruptId & ENABLE_BYTE_MASK) >> ENABLE_BITS_OFFSET);
+    *ui8IntRegId = ((etInterruptId & ENABLE_BYTE_MASK) >> ENABLE_BITS_OFFSET);
     *ui8IntBitId = (etInterruptId & ENABLE_BIT_MASK);
 }
 
@@ -101,8 +101,8 @@ void static intConfigure(intCtrl_config_st const* cfgArray)
 
         if (cfgArray[counter].etInterruptState == INTCTRL_ENABLE)
         {
-            uint8_t  ui8IntRegister = 0;
-            uint8_t  ui8IntBit     = 0;
+            uint8_t ui8IntRegister = 0;
+            uint8_t ui8IntBit      = 0;
 
             intGetMappingInfo(cfgArray[counter].etInterruptId, &ui8IntRegister,
                               &ui8IntBit);
@@ -123,7 +123,7 @@ void intCtrl_init(void)
 #elif (isConfigEnabled(INTCTRL_FAULTMASK))
     // Nothing to do, Global interrupts are enabled by default
 #else
-    #error "Invalid configuration value, only [0, 1] allowed."
+#    error "Invalid configuration value, only [0, 1] allowed."
 #endif
 
 #if (isConfigDisabled(INTCTRL_PRIMASK))
@@ -131,7 +131,7 @@ void intCtrl_init(void)
 #elif (isConfigEnabled(INTCTRL_PRIMASK))
     // Nothing to do, Global interrupts are enabled by default
 #else
-    #error "Invalid configuration value, only [0, 1] allowed."
+#    error "Invalid configuration value, only [0, 1] allowed."
 #endif
 
 #if (INTCTRL_VTABLE_OFFSET) // if vtable offset is provided
@@ -142,7 +142,7 @@ void intCtrl_init(void)
     SCB->APINT = 0x05FA0000
         | ((INTCTRL_PRIGROUP + PRIGROUP_START_BIT) << PRIGROUP_OFFSET);
 #else
-    #error "Invalid configuration value, only [0 ~ 3] allowed."
+#    error "Invalid configuration value, only [0 ~ 3] allowed."
 #endif
 
     intConfigure(g_intConfigurations);

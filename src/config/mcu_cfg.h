@@ -1,23 +1,26 @@
 /******************************************************************************
  * @file    mcu_cfg.h
- * 
+ *
  * @brief   Contains all user's configurations for mcu control driver
- * 
+ *
  * @version V1.0
  * @date    25 May 2024
- * 
+ *
  * @author  Nabil Yasser - Embedded Software Engineer
- * 
+ *
  * @author  GitHub: https://github.com/nabil-yasser
- * 
+ *
  *****************************************************************************/
 
 #ifndef MCU_CFG_H
-#define MCU_CFG_H
+#    define MCU_CFG_H
 
-/* ========================================================================= */
-/* ================            USER CONFIGURATIONS          ================ */
-/* ========================================================================= */
+/* =========================================================================
+ */
+/* ================            USER CONFIGURATIONS          ================
+ */
+/* =========================================================================
+ */
 
 /******************************************************************************
  * @brief System oscillator source configurations
@@ -28,7 +31,7 @@
  * - 2 : PIOSC / 4 (Precision internal oscillator / 4)
  * - 3 : LFIOSC (Low-frequency internal oscillator)
  *****************************************************************************/
-#define MCU_OSCSRC 0
+#    define MCU_OSCSRC 0
 
 /******************************************************************************
  * @brief Enable/Disable PLL as clock source
@@ -37,7 +40,7 @@
  * - 0 : Disable (default)
  * - 1 : Enable
  *****************************************************************************/
-#define MCU_PLL_STATE 0
+#    define MCU_PLL_STATE 0
 
 /******************************************************************************
  * @brief Controls the value assigned to XTAL
@@ -65,7 +68,7 @@
  * - 19 :  24.0 MHz (USB)
  * - 20 :  25.0 MHz (USB)
  *****************************************************************************/
-#define MCU_CRYSTAL_VALUE 15
+#    define MCU_CRYSTAL_VALUE 15
 
 /******************************************************************************
  * @brief Enable/Disable using system divisor for output clock
@@ -73,10 +76,10 @@
  * Possible values:
  * - 0 : Disable (default)
  * - 1 : Enable
- * 
+ *
  * @note This option must be enabled when using PLL as clock source.
  *****************************************************************************/
-#define MCU_USESYSDIV 0
+#    define MCU_USESYSDIV 0
 
 /******************************************************************************
  * @brief This option configures the value used by system clock divisor
@@ -98,10 +101,10 @@
  * - 13 : clk/14
  * - 14 : clk/15
  * - 15 : clk/16 (default)
- * 
+ *
  * @note This option is forced when using PLL as clock source
  *****************************************************************************/
-#define MCU_SYSDIV_VALUE 15
+#    define MCU_SYSDIV_VALUE 15
 
 #endif /* MCU_CFG_H */
 

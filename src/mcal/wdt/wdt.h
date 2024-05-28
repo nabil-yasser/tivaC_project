@@ -1,46 +1,31 @@
 /*************************************************************************/ /**
- * @file    main.c
- *
- * @brief   This file contains the main function body
- *
+ * @file    wdt.h
+ * 
+ * @brief   Contains watchdog timer functions prototypes and definitions
+ * 
  * @version V1.0
- * @date    01 May 2024
- *
+ * @date    28 May 2024
+ * 
  * @author  Nabil Yasser - Embedded Software Engineer
- *
+ * 
  * @author  GitHub: https://github.com/nabil-yasser
- *
+ * 
  *****************************************************************************/
+
+#ifndef WDT_H
+#    define WDT_H
 
 /* ========================================================================= */
 /* ================                 INCLUDES                ================ */
 /* ========================================================================= */
 
-#include "mcal/mcu/mcu.h"
-#include "mcal/intCtrl/intCtrl.h"
-#include "mcal/io/io.h"
-#include "mcal/wdt/wdt.h"
-#include "utils/macros.h"
-#include "utils/mcu_registers.h"
-
 /* ========================================================================= */
-/* ================              MAIN FUNCTION              ================ */
+/* ================        GLOBAL FUNCTION PROTOTYPES       ================ */
 /* ========================================================================= */
 
-int main(void)
-{
-    // Initialization section
-    mcu_init();
-    intCtrl_init();
-    io_init();
-    wdt_init();
+void wdt_init(void);
 
-    // Super loop section
-    for (;;)
-    {
-        // Program code section
-    }
-}
+#endif /* WDT_H */
 
 /* ========================================================================= */
 /* ================               END OF FILE               ================ */

@@ -35,6 +35,7 @@ TARGET					=
 SOURCES_HAS_HEADERS		= src/mcal/mcu/mcu.c\
 						  src/mcal/intCtrl/intCtrl.c\
 						  src/mcal/io/io.c\
+						  src/mcal/wdt/wdt.c\
 
 			  
 SOURCES					= src/main.c \

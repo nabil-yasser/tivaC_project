@@ -15,19 +15,16 @@
 #ifndef MCU_CFG_H
 #    define MCU_CFG_H
 
-/* =========================================================================
- */
-/* ================            USER CONFIGURATIONS          ================
- */
-/* =========================================================================
- */
+/* ========================================================================= */
+/* ================            USER CONFIGURATIONS          ================ */
+/* ========================================================================= */
 
 /*************************************************************************/ /**
  * @brief System oscillator source configurations
  *
  * Possible values:
  * - 0 : MOSC (Main oscillator)
- * - 1 : PIOSC (Precision internal oscillator)
+ * - 1 : PIOSC (Precision internal oscillator) (default)
  * - 2 : PIOSC / 4 (Precision internal oscillator / 4)
  * - 3 : LFIOSC (Low-frequency internal oscillator)
  *****************************************************************************/
@@ -51,7 +48,7 @@
  * -  2 :  4.9152 MHz
  * -  3 :  5 MHz (USB)
  * -  4 :  5.12 MHz
- * -  5 :  6 MHz (USB)
+ * -  5 :  6 MHz (USB) (default)
  * -  6 :  6.144 MHz
  * -  7 :  7.3728 MHz
  * -  8 :  8 MHz (USB)
